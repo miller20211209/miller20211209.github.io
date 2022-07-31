@@ -62,6 +62,11 @@
                     <br>
                     phone:
                     <a href="tel:+886-972-521-099">+886 972 521 099</a>
+                    <br>
+                    Personal WebSite: <br>
+                    <a href="https://www.linkedin.com/in/miller20211209" target="_blank">My Linkedin</a>
+                    <br>
+                    <a href="https://github.com/miller20211209/upload" target="_blank">My Works</a>
                 </div>
                 <p> I am experienced and interested in machine learning, deep learning, data science,
                     azure cloud service (azure machine learning service, ML Ops, azure bot service and cognitive
@@ -77,18 +82,173 @@
                         a data science solutions on azure.</li>
                 </ul>
                 <p>
+                    Python is now the mainly stream programming language in the world. (Please reference: <a
+                        href="https://www.tiobe.com/tiobe-index/" target="_blank">TIOBE</a>
+                    ) The reason why it so popular is nothing more than: simple and
+                    easy to learn. The most important is that there are so many various powerful packages to support it
+                    and to make it more and more popular, especially in machine learning and deep learning.
+                </p>
+                <p>
+                    For machine learning, I study the textbook “Machine Learning with PyTorch and Scikit-learn book --
+                    Sebastian”. From the book, we can define machine learning steps as followings:
+                </p>
+                <ul type="square">
+                    <li>Data exploration, data cleaning, feature engineering & dimensionality reduction </li>
+                    <li>splitting dataset into train data and test data </li>
+                    <li>train data combine with algorithms </li>
+                    <li>generating train model </li>
+                    <li> model scoring </li>
+                    <li> re-train model </li>
+                    <li> model evaluation </li>
+                    <li> model prediction & model deployment </li>
+                </ul>
+                <p>They are explained as follows: </p>
+                <ul type="square">
+                    <li>Data exploration, data cleaning, feature engineering & dimensionality reduction:</li>
+                    <ul type="circle">
+                        <li>Data exploration & data cleaning: (focus on the data content)</li>
+                        <ul type="disc">
+                            <li>Visualization data: Use bar charts, histograms, kernel density plot, seaborn, scatter
+                                plot, deal with overplotting, desity-2d plot, box plot, violin plot to know the
+                                relationship between features and to figure out the possible problem in data.</li>
+                            <li>Data cleaning: Data cleaning for the missing values and duplicated rows. Transform the
+                                column data type. Process the imbalanced data, recode the column names, etc.</li>
+                        </ul>
+                        <li>Feature engineering: (focus on the data features)</li>
+                        <ul type="disc">
+                            <li>Transforming numeric variables, compute new features, aggregating categories variables.
+                            </li>
+                            <li>Use one hot encoding to transform categorical features (ordinal features or nominal
+                                features).</li>
+                            <li>Feature scaling (normalization or standardization), transform date code, regularization
+                                (L1, L2), etc.</li>
+                        </ul>
+                        <li>Dimensionality reduction: The purpose is to reduce the complexity of the model and avoid
+                            overfitting. From the other viewpoint, the data size is reduced but the data information is
+                            same. The methods are feature selection and feature extraction which explain as following:
+                        </li>
+                        <ul type="disc">
+                            <li>Feature selection: Two ways to get features importance, SBS and Random Forest.</li>
+                            <li>Feature extraction: There are three ways, PCA (Principal Component Analysis), LDA
+                                (Linear Discriminant Analysis), Kernel PCA.</li>
+                        </ul>
+                    </ul>
+                    <li>model selection: </li>
+                    <ul type="circle">
+                        <li>The six main functions of scikit-learn are classification, regression, clustering,
+                            dimensionality reduction, model selection, preprocessing.</li>
+                        <li>Classification algorithm:</li>
+                        <ul type="disc">
+                            <li>KNN, Logistic Regression, Support Vector Machine, Decision Tree, and Random Forest. We
+                                can choose the proper algorithm solve certain problem. Or if you don’t how to choose,
+                                pipeline or ensemble learning together with grid search CV method can help you to find
+                                the “best” algorithm.</li>
+                        </ul>
+                    </ul>
+                    <li>Performance tuning:</li>
+                    <ul type="circle">
+                        <li>Using grid search CV to find out optimal hyperparameters combinations. (Spending money to
+                            buy time.)</li>
+                        <li>Using pipeline to simplify code and easy to tune hyperparameters. To find the best
+                            performance.</li>
+                        <li>K-fold cross-validation/Holdout cross validation: to avoid the sample data to influence
+                            model performance.</li>
+                        <li>Regularization L1 & L2: to solve overfitting problems.</li>
+                        <li>Overall speaking, using pipeline is for tuning hyperparameter. After tuning hyperparameter,
+                            we want to make use of k-fold to avoid possibility of sampling data influencing model
+                            result. Another factor also affects model performance is imbalance data. For this case,
+                            something we can do:</li>
+                        <ul type="disc">
+                            <li>Try to get more data.</li>
+                            <li>Change performance index, for example, accuracy or loss is not so important to
+                                imbalanced data. We can change to use confusion matrix index, like precision, recall.
+                                (so-called f1-score).</li>
+                            <li>SMOTE: Dropping certain proportion of the majority data and increasing the minority data
+                                size by using normal distribution, something like that random forest. Using SMOTE to
+                                make the data more balanced.</li>
+                        </ul>
+                    </ul>
+                    <li>Performance index:</li>
+                    <ul type="circle">
+                        <li>Confusion metrics: The indicators in common use are: Accuracy, Precision, Recall, F1 score,
+                            sensitivity.</li>
+                        <li>AUC/ROC:</li>
+                        <ul type="disc">
+                            <li>ROC (Receiver Operator Characteristic): Based on each decision threshold, to compare the
+                                change between true positive rate and false positive rate.</li>
+                            <li>AUC (Area Under the Curve): the larger area of AUC is the better performance of model.
+                            </li>
+                        </ul>
+                    </ul>
+                    <li>Ensembling Learning: We can use many classification methods by using ensemble classifier. Four
+                        methods of ensemble learning:</li>
+                    <ul type="circle">
+                        <li>Majority Voting: the majority voting can win the prediction.</li>
+                        <li>Bagging: Resample with replacement to generate enough bootstrap samples. Increase new data
+                            to enhance and modify the bootstrap data by using normal distribution.</li>
+                        <li>Boosting: Focus on hard classified sample and learn from error judgement. Amplify the weak
+                            part during learning process and expect to get better performance.</li>
+                        <li>Adaboost (Adaptive Boosting): Use full sample for training and make bigger weighting for
+                            error judgement sample. Retrain the model.</li>
+                    </ul>
+                </ul>
+                <p>For deep learning, I study “Pyorch 開發者傳授祕笈 --- 陳昭明”. I earn a lot from that book. When I do the
+                    PyTorch practice, I do the comparison to TensorFlow to understand the advantage and disadvantage of
+                    the two packages. My personal point of view, PyTorch is more suitable than TensorFlow in deep
+                    learning by using Python. TensorFlow version update frequency is too fast. It means the application
+                    you implement in TensorFlow might not be work in the latest version. Usually, you need to take
+                    effort to modify for that.</p>
+                <br>
+                <p>In deep learning, the CNN (convolution neural network) is basic neural network but it is the most
+                    important. Simply speaking, CNN use image processing technology to extract image features and
+                    abstract gradually. We can treat CNN as convolution + pooling layers + fully connected layers +
+                    binary classifications. To reduce computing power, there are some assumptions in CNN.</p>
+                <br>
+                <p>Same as Scikit-learn, if you want to get good results, there are many details that need to be
+                    process. For CNN, there are many checkpoints you need to notice, such as input images, convolution
+                    setting, filter setting, pooling, flatten, activation function, feature extraction, pooling layer,
+                    computing power, confusion matrix. (You can reference my works from website <a
+                        href="https://github.com/miller20211209/upload" target="_blank">
+                        My Works </a> )</p>
+                <br>
+                <p>Sometimes, I also learn the newest AI technology from internet, such as website paperwithcode, GPT3,
+                    openAI, etc. Consider the paper quantity on paperwithcode, PyTorch is more and more popular than
+                    TensorFlow. In recently, the headline is the YOLO v7 won the COCO competition again. No doubt, if
+                    you have object detection, YOLO v7 is the best choice because YOLO v7 surpasses all known object
+                    detectors in both speed and accuracy in the range from 5 fps to 160 fps. It is amazing and good
+                    enough. I hope I can try to simulate YOLO v7 and put it on my website as one of my works in the
+                    following moths. (Please reference website <a
+                        href="https://paperswithcode.com/paper/yolov7-trainable-bag-of-freebies-sets-new"
+                        target="_blank"> YOLO v7 </a> )</p>
+                <br>
+                <p>In order to get pass certifications, I also study Microsoft Azure MLOps structure, mechanism and
+                    device. Fortunately, I got the certifications and got good scores. I also take some time to be
+                    familiar with Azure DevOps. The concept of Aure DevOps is similar with Git but its UI is more
+                    attractive. But you need to pay attention to your money. When you want to create free trial but set
+                    the wrong choice, the cost will accumulate little by little everyday under your eyes. Azure DevOps
+                    provide CICD and make your team more efficiency.</p>
+                <br>
+                <p>That is the introduction of my machine experience. Come back to my current work status and describe
+                    as follows.</p>
+                <br>
+                <p>
                     I am now working in Techman Robot Inc. as a senior manager responsible for smart factory IoT
-                    department in R&D division. I also responsible for our IoT product business. Our IoT software is
-                    the combination of MES (Manufacturing Execution System) & SCADA (Supervisory Control And Data
+                    department in R&D division. I also responsible for our IoT product business. Our IoT
+                    software is
+                    the combination of MES (Manufacturing Execution System) & SCADA (Supervisory Control And
+                    Data
                     Acquisition).
                     <br>
                     <br>
-                    We are a R&D team but we need to be responsible for our IoT product business. Our business scope
-                    includes software products, customized integration SCADA & MES solutions at customer side. We
+                    We are a R&D team but we need to be responsible for our IoT product business. Our business
+                    scope
+                    includes software products, customized integration SCADA & MES solutions at customer side.
+                    We
                     provide customized solution for customers.
                     <br>
                     <br>
-                    My experience also includes, industrial field automatic application integration, manage R&D team
+                    My experience also includes, industrial field automatic application integration, manage R&D
+                    team
                     or field application team, firmware development, and software development.
                     <br>
                     Below items show the certification I have got in recent months.
